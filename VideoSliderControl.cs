@@ -21,6 +21,11 @@ public class VideoSliderControl : SliderControl
         videoPlayer.frame = (long)slider.value;
     }
 
+    public override void OnBeginDrag(PointerEventData eventData)
+    {
+            isSliderControl = true;
+    }
+        
     public override void OnPointerDown(PointerEventData eventData)
     {
         try
